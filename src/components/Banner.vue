@@ -1,5 +1,5 @@
 <template>
-    <div id="gyBanner" class="gy-banner" :style="{ height: winH }">
+    <div id="gyBanner" class="gy-banner" :style="{ height: winH }" :class="{ 'animation--padding' : bannerAnimation }">
         <div class="banner__body" :class="{ 'banner__body--width' : imgScale == 'width' }">
             <div class="banner__text">
                 <h1 class="banner__title">This is a title.</h1>
@@ -16,10 +16,17 @@ export default {
         return {
             winH: window.innerHeight + 'px',
             imgScale: (window.innerWidth - 20) / (window.innerHeight - 20) >= 1.78 ? 'width' : 'height',
+            bannerAnimation: false,
         };
     },
     created() {
     },
+    mounted() {
+        var that = this;
+        setTimeout(function() {
+            that.bannerAnimation = true;
+        }, 1000);
+    }
 };
 </script>
 
@@ -27,7 +34,7 @@ export default {
 .gy-banner {
     width: 100%;
     box-sizing: border-box;
-    padding: 20px;
+    transition: all 2s ease-out;
     background-color: #fff;
     .banner {
         &__body {
@@ -58,6 +65,9 @@ export default {
         &__content {
             font-size: 30px;
         }
+    }
+    &.animation--padding {
+        padding: 20px;
     }
 }
 </style>

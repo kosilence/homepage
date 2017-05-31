@@ -1,8 +1,6 @@
 <template>
     <div id="gyAlbum" class="gy-album">
-        <div class="album__title">
-            <h2>ABDDSDF Photos</h2>
-        </div>
+        <gy-title :scrollPos="scrollPos"></gy-title>
         <ul id="albumCards" class="album__cards" :style="{ minHeight: cardsHeight }">
             <li v-for="photo in photosList" :style="{ width: cardWidth, height: cardHeight }">
                 <template>
@@ -15,19 +13,25 @@
                 </template>
             </li>
         </ul>
-
     </div>
 </template>
 
 <script>
+import gyTitle from './Title';
+
 export default {
     name: 'gy-album',
+    components: {
+        gyTitle,
+    },
     data() {
         return {
-            cardsHeight: (window.innerHeight - 140) + 'px',
+            cardsHeight: (window.innerHeight - 210) + 'px',
             cardWidth: (window.innerWidth / 4 - 60) + 'px',
             cardHeight: (window.innerWidth / 4 - 30) + 'px',
             cardLineHeight: 0,
+            // Album title 在页面中距离顶部的位置
+            scrollPos: 210,
             photosList: [
                 {
                     name: 'Ace',
@@ -65,14 +69,13 @@ export default {
         };
     },
     created() {
-
     },
     methods: {
         setAlbumSize: function() {
             var albumCardsWidth = document.getElementById('albumCards').clientWidth;
             this.cardWidth = (albumCardsWidth / 4 - 30) + 'px';
-            this.cardHeight = (albumCardsWidth / 4 + 30) + 'px';
-            this.cardLineHeight = (albumCardsWidth / 4 + 30 - 250) > 100 ? '100px' : (albumCardsWidth / 4 + 30 - 250) + 'px';
+            this.cardHeight = (albumCardsWidth / 4) + 'px';
+            this.cardLineHeight = (albumCardsWidth / 4 - 250) > 100 ? '100px' : (albumCardsWidth / 4 - 250) + 'px';
         }
     },
     mounted() {
@@ -87,13 +90,8 @@ export default {
     box-sizing: border-box;
     max-width: 1600px;
     margin: 0 auto;
-    padding: 60px 30px 0;
+    padding: 0 30px;
     text-align: center;
-    .album__title {
-        height: 80px;
-        line-height: 80px;
-        font-size: 30px;
-    }
     .album__cards {
         width: 100%;
         display: flex;
@@ -108,7 +106,7 @@ export default {
         li {
             max-width: 320px;
             max-height: 350px;
-            margin: 10px 0 60px;
+            margin: 10px 0 30px;
             cursor: pointer;
         }
     }
