@@ -9,21 +9,23 @@
         </ul>
     </div>
 </template>
+
 <script>
 export default {
     name: 'gy-nav',
 };
 </script>
+
 <style lang="scss">
 .gy-nav {
     width: 100%;
     box-sizing: border-box;
     background: none;
     position: fixed;
-    top: 0;
+    top: 20px;
     height: 60px;
     line-height: 60px;
-    padding: 0 40px;
+    padding: 0 60px;
     z-index: 99;
     .nav {
         &__logo {
@@ -35,6 +37,9 @@ export default {
             li {
                 display: inline-block;
                 margin-left: 30px;
+            }
+            a:hover {
+                color: #eee;
             }
         }
     }

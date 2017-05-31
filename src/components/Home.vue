@@ -1,15 +1,19 @@
 <template>
     <div class="home">
         <gy-banner></gy-banner>
+        <gy-album></gy-album>
     </div>
 </template>
+
 <script>
 import gyBanner from './Banner';
+import gyAlbum from './Album';
 
 export default {
     name: 'home',
     components: {
         gyBanner,
+        gyAlbum,
     },
     data() {
         return {
@@ -18,7 +22,7 @@ export default {
     },
 };
 </script>
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+
 <style scoped>
 
 </style>
