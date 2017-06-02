@@ -1,7 +1,7 @@
 <template>
     <div id="gyNav" class="gy-nav">
-        <div class="nav__logo">Cosin.tk</div>
-        <ul class="nav__pages">
+        <div class="gy-nav__logo">Cosin.tk</div>
+        <ul class="gy-nav__pages">
             <li><a href="">Home</a></li>
             <li><a href="">Album</a></li>
             <li><a href="">Blog</a></li>
@@ -27,20 +27,18 @@ export default {
     line-height: 60px;
     padding: 0 60px;
     z-index: 99;
-    .nav {
-        &__logo {
-            float: left;
-            cursor: pointer;
+    &__logo {
+        float: left;
+        cursor: pointer;
+    }
+    &__pages {
+        float: right;
+        li {
+            display: inline-block;
+            margin-left: 30px;
         }
-        &__pages {
-            float: right;
-            li {
-                display: inline-block;
-                margin-left: 30px;
-            }
-            a:hover {
-                color: #eee;
-            }
+        a:hover {
+            color: #eee;
         }
     }
 }

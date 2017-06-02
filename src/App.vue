@@ -1,5 +1,5 @@
 <template>
-    <div id="app" class="app">
+    <div id="app" class="gy-app">
         <gy-nav></gy-nav>
         <router-view></router-view>
     </div>
@@ -28,7 +28,7 @@ body {
     padding: 0;
     min-width: 1200px;
 }
-.app {
+.gy-app {
     width: 100%;
     position: relative;
     text-align: center;

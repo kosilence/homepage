@@ -1,8 +1,7 @@
 <template>
     <div id="gyTitle" class="gy-title">
         <div class="gy-title__line gy-title__line--top" :class="{ 'animation--top': lineAnimation }"></div>
-        <h3 class="gy-title__sub"></h3>
-        <h2 class="gy-title__main">Album Ddfsdfsdfs</h2>
+        <h2 class="gy-title__main">{{ mainTitle }}</h2>
         <div class="gy-title__line gy-title__line--bottom" :class="{ 'animation--bottom': lineAnimation }"></div>
     </div>
 </template>
@@ -10,7 +9,7 @@
 <script>
 export default {
     name: 'gy-title',
-    props: ['scrollPos'],
+    props: ['scrollPos', 'mainTitle'],
     data() {
         return {
             lineAnimation: false,
@@ -24,7 +23,7 @@ export default {
             if(this.lineAnimation) {
                 return;
             }
-            if(window.scrollY >= this.scrollPos) {
+            if(window.scrollY >= this.scrollPos && window.scrollY <= (this.scrollPos + window.innerHeight)) {
                 this.lineAnimation = true;
             }else {
                 return;
@@ -37,10 +36,10 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .gy-title {
     width: 100%;
-    margin: 80px 0 50px;
+    padding: 65px 0 65px;
     text-align: center;
     position: relative;
     font-size: 22px;
@@ -53,12 +52,12 @@ export default {
         transform: rotate(-45deg);
     }
     &__line--top {
-        top: 3px;
+        top: 68px;
         left: 50%;
         margin-left: 15px;
     }
     &__line--bottom {
-        bottom: 3px;
+        bottom: 68px;
         right: 50%;
         margin-right: 15px;
     }
@@ -81,25 +80,25 @@ export default {
 @keyframes topTitleAnim
 {
     0% {
-        top: -15px;
+        top: 50px;
         margin-left: 30px;
         transform: rotate(0deg) scaleX(1);
         opacity: 0;
     }
     60% {
-        top: -15px;
+        top: 50px;
         margin-left: 30px;
         opacity: 1;
         transform: rotate(-1485deg) scaleX(1);
     }
     90% {
-        top: -40px;
+        top: 40px;
         margin-left: 55px;
         opacity: 1;
         transform: rotate(-1485deg) scaleX(1.5);
     }
     100% {
-        top: 3px;
+        top: 68px;
         margin-left: 15px;
         opacity: 1;
         transform: rotate(-1485deg) scaleX(1);
@@ -108,25 +107,25 @@ export default {
 @keyframes bottomTitleAnim
 {
     0% {
-        bottom: -15px;
+        bottom: 50px;
         margin-right: 30px;
         transform: rotate(0deg) scaleX(1);
         opacity: 0;
     }
     60% {
-        bottom: -15px;
+        bottom: 50px;
         margin-right: 30px;
         opacity: 1;
         transform: rotate(-1485deg) scaleX(1);
     }
     90% {
-        bottom: -40px;
+        bottom: 25px;
         margin-right: 55px;
         opacity: 1;
         transform: rotate(-1485deg) scaleX(1.5);
     }
     100% {
-        bottom: 3px;
+        bottom: 68px;
         margin-right: 15px;
         opacity: 1;
         transform: rotate(-1485deg) scaleX(1);
