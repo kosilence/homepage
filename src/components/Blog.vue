@@ -2,8 +2,8 @@
     <div id="gyBlog" class="gy-blog" :style="{ minHeight: wrapperHeight }">
         <gy-title :scrollPos="scrollPos" :mainTitle="mainTitle"></gy-title>
         <div class="gy-blog__articles">
-            <div class="gy-blog__article" v-for="article in articles">
-                <gy-article :article="article"></gy-article>
+            <div class="gy-blog__article" v-for="(article, articleIndex) in articles">
+                <gy-article :article="article" :articleIndex="articleIndex"></gy-article>
             </div>
         </div>
     </div>
@@ -12,7 +12,7 @@
 <script>
 import gyTitle from './Title';
 import gyArticle from './Article';
-var ScrollReveal = require('ScrollReveal');
+import ScrollReveal from 'ScrollReveal';
 
 export default {
     name: 'gy-blog',
@@ -59,10 +59,10 @@ export default {
                     url: 'http://ww1.sinaimg.cn/large/9eb6a82aly1fg0vou96hnj21ao0t646i.jpg',
                 },
                 {
-                    time: '09/02/2016',
+                    time: '更多内容',
                     title: 'More...',
-                    desc: 'dfsdfsdfsfsfsdfsdfdsfsdfsdfsfsdfsfdsfs',
-                    url: 'http://ww1.sinaimg.cn/large/9eb6a82aly1fg0vou96hnj21ao0t646i.jpg',
+                    desc: 'DDDDDDDDDD',
+                    url: 'http://blog.cosin.tk/',
                 }
             ],
         };
@@ -87,6 +87,7 @@ export default {
     padding: 0 30px;
     text-align: center;
     background-color: #f5f5f5;
+    box-sizing: border-box;
     &__articles {
 
     }

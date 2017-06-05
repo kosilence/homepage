@@ -1,5 +1,5 @@
 <template>
-    <div id="gyBanner" class="gy-banner" :style="{ height: winH }" :class="{ 'animation--padding' : bannerAnimation }">
+    <div id="gyBanner" class="gy-banner" :class="{ 'animation--padding' : bannerAnimation }" :style="{ height: winHeight }">
         <div class="gy-banner__body" :class="{ 'gy-banner__body--width' : imgScale == 'width' }">
             <div class="gy-banner__text">
                 <h1 class="gy-banner__title">This is a title.</h1>
@@ -14,7 +14,7 @@ export default {
     name: 'gy-banner',
     data() {
         return {
-            winH: window.innerHeight + 'px',
+            winHeight: window.innerHeight + 'px',
             imgScale: (window.innerWidth - 20) / (window.innerHeight - 20) >= 1.78 ? 'width' : 'height',
             bannerAnimation: false,
         };
@@ -25,7 +25,7 @@ export default {
         var that = this;
         setTimeout(function() {
             that.bannerAnimation = true;
-        }, 1000);
+        }, 500);
     }
 };
 </script>
@@ -33,6 +33,7 @@ export default {
 <style lang="scss" scoped>
 .gy-banner {
     width: 100%;
+    height: 100%;
     box-sizing: border-box;
     transition: all 2s ease-out;
     background-color: #fff;

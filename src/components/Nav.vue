@@ -2,10 +2,10 @@
     <div id="gyNav" class="gy-nav">
         <div class="gy-nav__logo">Cosin.tk</div>
         <ul class="gy-nav__pages">
-            <li><a href="">Home</a></li>
-            <li><a href="">Album</a></li>
-            <li><a href="">Blog</a></li>
-            <li><a href="">Museum</a></li>
+            <li><a class="page__link page__link--white" href="#">Home</a></li>
+            <li><a class="page__link page__link--white" href="#">Album</a></li>
+            <li><a class="page__link page__link--white" href="#">Blog</a></li>
+            <li><a class="page__link page__link--white" href="#">Museum</a></li>
         </ul>
     </div>
 </template>
@@ -37,8 +37,20 @@ export default {
             display: inline-block;
             margin-left: 30px;
         }
-        a:hover {
-            color: #eee;
+        .page__link {
+            transition: color .3s;
+            &--white {
+                color: #bbb;
+                &:hover {
+                    color: #333;
+                }
+            }
+            &--black {
+                color: #333;
+                &:hover {
+                    color: #bbb;
+                }
+            }
         }
     }
 }
