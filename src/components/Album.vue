@@ -1,6 +1,6 @@
 <template>
     <div id="gyAlbum" class="gy-album" :style="{ minHeight: winHeight }">
-        <gy-title :scrollPos="scrollPos" :mainTitle="mainTitle"></gy-title>
+        <gy-title :mainTitle="mainTitle"></gy-title>
         <ul id="albumCards" class="gy-album__cards">
             <li v-for="card in cards" class="gy-album__card">
                 <gy-card :card="card"></gy-card>
@@ -25,8 +25,6 @@ export default {
     data() {
         return {
             winHeight: window.innerHeight + 'px',
-            // Album title 在页面中距离顶部的位置
-            scrollPos: 210,
             mainTitle: 'Album',
             scrollReveal: ScrollReveal(),
             cards: [

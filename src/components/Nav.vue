@@ -2,7 +2,7 @@
     <div id="gyNav" class="gy-nav">
         <div class="gy-nav__logo">Cosin.tk</div>
         <ul class="gy-nav__pages">
-            <li><a class="page__link page__link--white" href="#">Home</a></li>
+            <li><a class="page__link page__link--white" href="#" @click="backToBanner">Home</a></li>
             <li><a class="page__link page__link--white" href="#">Album</a></li>
             <li><a class="page__link page__link--white" href="#">Blog</a></li>
             <li><a class="page__link page__link--white" href="#">Museum</a></li>
@@ -11,8 +11,15 @@
 </template>
 
 <script>
+import Bus from '../js/bus.js';
+
 export default {
     name: 'gy-nav',
+    methods: {
+        backToBanner: function() {
+            Bus.$emit('backToBanner');
+        }
+    }
 };
 </script>
 
@@ -29,7 +36,6 @@ export default {
     z-index: 99;
     &__logo {
         float: left;
-        cursor: pointer;
     }
     &__pages {
         float: right;

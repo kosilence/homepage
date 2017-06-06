@@ -1,6 +1,6 @@
 <template>
     <div id="gyBlog" class="gy-blog" :style="{ minHeight: wrapperHeight }">
-        <gy-title :scrollPos="scrollPos" :mainTitle="mainTitle"></gy-title>
+        <gy-title :mainTitle="mainTitle"></gy-title>
         <div class="gy-blog__articles">
             <div class="gy-blog__article" v-for="(article, articleIndex) in articles">
                 <gy-article :article="article" :articleIndex="articleIndex"></gy-article>
@@ -23,8 +23,6 @@ export default {
     data() {
         return {
             wrapperHeight: window.innerHeight + 'px',
-            // Blog title 在页面中距离顶部的位置
-            scrollPos: window.innerHeight + 210,
             mainTitle: 'Bdddd',
             scrollReveal: ScrollReveal(),
             articles: [

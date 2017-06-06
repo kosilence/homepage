@@ -9,26 +9,30 @@
 <script>
 export default {
     name: 'gy-title',
-    props: ['scrollPos', 'mainTitle'],
+    props: ['mainTitle'],
     data() {
         return {
+            scrollPos: 0,
             lineAnimation: false,
         };
     },
     created() {
-        window.addEventListener('scroll', this.titleLineAnim);
     },
     methods: {
         titleLineAnim() {
             if(this.lineAnimation) {
                 return;
             }
-            if(window.scrollY >= this.scrollPos && window.scrollY <= (this.scrollPos + window.innerHeight)) {
+            if(window.scrollY >= this.scrollPos) {
                 this.lineAnimation = true;
             }else {
                 return;
             }
         }
+    },
+    mounted() {
+        this.scrollPos = this.$el.offsetTop + 210 - (window.innerHeight * 2);
+        window.addEventListener('scroll', this.titleLineAnim);
     },
     destroyed () {
         window.removeEventListener('scroll', this.titleLineAnim);
