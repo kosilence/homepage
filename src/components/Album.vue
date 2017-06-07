@@ -25,7 +25,7 @@ export default {
     data() {
         return {
             winHeight: window.innerHeight + 'px',
-            mainTitle: 'Album',
+            mainTitle: 'A',
             scrollReveal: ScrollReveal(),
             cards: [
                 {

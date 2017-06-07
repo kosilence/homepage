@@ -3,14 +3,18 @@
         <gy-banner id="pageBanner" v-on:scrollToPage="scrollToPage"></gy-banner>
         <gy-album id="pageAlbum"></gy-album>
         <gy-blog id="pageBlog"></gy-blog>
+        <gy-museum id="pageMuseum"></gy-museum>
     </div>
 </template>
 
 <script>
 import Bus from '../js/bus.js';
+
 import gyBanner from './Banner';
 import gyAlbum from './Album';
 import gyBlog from './Blog';
+import gyMuseum from './Museum';
+
 import gyScrollJS from '../js/gy-scroll.js';
 
 export default {
@@ -19,6 +23,7 @@ export default {
         gyBanner,
         gyAlbum,
         gyBlog,
+        gyMuseum,
     },
     data() {
         return {

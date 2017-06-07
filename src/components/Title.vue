@@ -48,7 +48,7 @@ export default {
     position: relative;
     font-size: 22px;
     &__line {
-        width: 44px;
+        width: 40px;
         height: 1px;
         background-color: #000;
         position: absolute;
@@ -56,12 +56,12 @@ export default {
         transform: rotate(-45deg);
     }
     &__line--top {
-        top: 68px;
+        top: 70px;
         left: 50%;
         margin-left: 15px;
     }
     &__line--bottom {
-        bottom: 68px;
+        bottom: 70px;
         right: 50%;
         margin-right: 15px;
     }
@@ -72,11 +72,11 @@ export default {
         font-weight: bold;
     }
     .animation--top {
-        animation: topTitleAnim 2s;
+        animation: topTitleAnim 1.5s;
         opacity: 1;
     }
     .animation--bottom {
-        animation: bottomTitleAnim 2s;
+        animation: bottomTitleAnim 1.5s;
         opacity: 1;
     }
 }
@@ -85,54 +85,54 @@ export default {
 {
     0% {
         top: 50px;
-        margin-left: 30px;
+        margin-left: 35px;
         transform: rotate(0deg) scaleX(1);
         opacity: 0;
     }
     60% {
         top: 50px;
-        margin-left: 30px;
+        margin-left: 35px;
         opacity: 1;
-        transform: rotate(-1485deg) scaleX(1);
+        transform: rotate(675deg) scaleX(1);
     }
     90% {
-        top: 40px;
+        top: 30px;
         margin-left: 55px;
         opacity: 1;
-        transform: rotate(-1485deg) scaleX(1.5);
+        transform: rotate(675deg) scaleX(1.5);
     }
     100% {
-        top: 68px;
+        top: 70px;
         margin-left: 15px;
         opacity: 1;
-        transform: rotate(-1485deg) scaleX(1);
+        transform: rotate(675deg) scaleX(1);
     }
 }
 @keyframes bottomTitleAnim
 {
     0% {
         bottom: 50px;
-        margin-right: 30px;
+        margin-right: 35px;
         transform: rotate(0deg) scaleX(1);
         opacity: 0;
     }
     60% {
         bottom: 50px;
-        margin-right: 30px;
+        margin-right: 35px;
         opacity: 1;
-        transform: rotate(-1485deg) scaleX(1);
+        transform: rotate(675deg) scaleX(1);
     }
     90% {
-        bottom: 25px;
+        bottom: 30px;
         margin-right: 55px;
         opacity: 1;
-        transform: rotate(-1485deg) scaleX(1.5);
+        transform: rotate(675deg) scaleX(1.5);
     }
     100% {
-        bottom: 68px;
+        bottom: 70px;
         margin-right: 15px;
         opacity: 1;
-        transform: rotate(-1485deg) scaleX(1);
+        transform: rotate(675deg) scaleX(1);
     }
 }
 </style>

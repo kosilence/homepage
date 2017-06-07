@@ -1,9 +1,9 @@
 <template>
-    <div id="gyBlog" class="gy-blog" :style="{ minHeight: wrapperHeight }">
+    <div id="gyMuseum" class="gy-museum" :style="{ minHeight: wrapperHeight }">
         <gy-title :mainTitle="mainTitle"></gy-title>
-        <ul class="gy-blog__articles">
-            <li class="gy-blog__article" v-for="(article, articleIndex) in articles">
-                <gy-article :article="article" :articleIndex="articleIndex"></gy-article>
+        <ul class="gy-museum__works" :style="{ height: workHeight }">
+            <li class="gy-museum__work" v-for="(work, workIndex) in works" :style="{ width: workWidth }">
+                <gy-work :work="work" :workIndex="workIndex"></gy-work>
             </li>
         </ul>
     </div>
@@ -11,49 +11,51 @@
 
 <script>
 import gyTitle from './Title';
-import gyArticle from './Article';
+import gyWork from './Work';
 import ScrollReveal from 'ScrollReveal';
 
 export default {
-    name: 'gy-blog',
+    name: 'gy-museum',
     components: {
         gyTitle,
-        gyArticle,
+        gyWork,
     },
     data() {
         return {
             wrapperHeight: window.innerHeight + 'px',
-            mainTitle: 'B',
+            workHeight: (window.innerHeight - 260) + 'px',
+            mainTitle: 'M',
             scrollReveal: ScrollReveal(),
-            articles: [
+            workWidth: 0,
+            works: [
                 {
                     time: '09/02/2016',
                     title: 'Deedesee',
-                    desc: 'dfsdfsdfsfsfsdfsdfdsfsdfsdfsfsdfsfdsfs',
+                    desc: '大法师打发士大夫撒发大水打飞机深度克隆福建省快递费吉林省会计的疯狂圣诞节疯狂圣诞节疯狂世界的法律京东方；看时间；地方',
                     url: 'http://ww1.sinaimg.cn/large/9eb6a82aly1fg0vou96hnj21ao0t646i.jpg',
                 },
                 {
                     time: '09/02/2016',
                     title: 'Deedesee',
-                    desc: 'dfsdfsdfsfsfsdfsdfdsfsdfsdfsfsdfsfdsfs',
+                    desc: '大法师打发士大夫撒发大水打飞机深度克隆福建省快递费吉林省会计的疯狂圣诞节疯狂圣诞节疯狂世界的法律京东方；看时间；地方',
                     url: 'http://ww1.sinaimg.cn/large/9eb6a82aly1fg0vou96hnj21ao0t646i.jpg',
                 },
                 {
                     time: '09/02/2016',
                     title: 'Deedesee',
-                    desc: 'dfsdfsdfsfsfsdfsdfdsfsdfsdfsfsdfsfdsfs',
+                    desc: '大法师打发士大夫撒发大水打飞机深度克隆福建省快递费吉林省会计的疯狂圣诞节疯狂圣诞节疯狂世界的法律京东方；看时间；地方',
                     url: 'http://ww1.sinaimg.cn/large/9eb6a82aly1fg0vou96hnj21ao0t646i.jpg',
                 },
                 {
                     time: '09/02/2016',
                     title: 'Deedesee',
-                    desc: 'dfsdfsdfsfsfsdfsdfdsfsdfsdfsfsdfsfdsfs',
+                    desc: '大法师打发士大夫撒发大水打飞机深度克隆福建省快递费吉林省会计的疯狂圣诞节疯狂圣诞节疯狂世界的法律京东方；看时间；地方',
                     url: 'http://ww1.sinaimg.cn/large/9eb6a82aly1fg0vou96hnj21ao0t646i.jpg',
                 },
                 {
                     time: '09/02/2016',
                     title: 'Deedesee',
-                    desc: 'dfsdfsdfsfsfsdfsdfdsfsdfsdfsfsdfsfdsfsdfsdfsdfsfsfsdfsdfdsfsdfsdfsfsdfsfdsfsdfsdfsdfsfsfsdfsdfdsfsdfsdfsfsdfsfdsfsdfsdfsdfsfsfsdfsdfdsfsdfsdfsfsdfsfdsfsdfsdfsdfsfsfsdfsdfdsfsdfsdfsfsdfsfdsfsdfsdfsdfsfsfsdfsdfdsfsdfsdfsfsdfsfdsfsdfsdfsdfsfsfsdfsdfdsfsdfsdfsfsdfsfdsfs',
+                    desc: '发的发是的是的发送到',
                     url: 'http://ww1.sinaimg.cn/large/9eb6a82aly1fg0vou96hnj21ao0t646i.jpg',
                 },
                 {
@@ -66,10 +68,11 @@ export default {
         };
     },
     created() {
+        this.workWidth = 100 / (this.works.length) + '%';
     },
     methods: {
         setBlogScrollReveal: function() {
-            this.scrollReveal.reveal('.gy-blog__article', { duration: 2000 }, 50);
+            this.scrollReveal.reveal('.gy-museum__work', { duration: 2000 }, 50);
         }
     },
     mounted() {
@@ -79,18 +82,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.gy-blog {
+.gy-museum {
     width: 100%;
     margin: 0 auto;
-    padding: 0 30px;
+    padding: 0;
     text-align: center;
-    background-color: #f5f5f5;
     box-sizing: border-box;
-    &__articles {
-
-    }
-    &__article {
+    &__works {
         width: 100%;
+        box-shadow: 0 -5px 20px #ddd;
+    }
+    &__work {
+        display: inline-block;
+        float: left;
+        height: 100%;
+        background-color: #333;
     }
 }
 </style>
