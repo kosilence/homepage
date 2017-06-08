@@ -6,6 +6,8 @@ define('gyScrollJS', [],
             39: 1,
             40: 1
         };
+        var scrollTimer = null;
+
         function preventDefault(e) {
             e = e || window.event;
             if (e.preventDefault)
@@ -18,7 +20,23 @@ define('gyScrollJS', [],
                 return false;
             }
         }
-
+        function scrollAnim(pos) {
+            if(window.scrollY < pos) {
+                var scrollTo = Math.abs(window.scrollY - pos) < 5 ? pos : (window.scrollY + 5);
+                if(scrollTo >= pos) {
+                    scrollTimer = window.clearInterval(scrollTimer);
+                }else {
+                    window.scroll(0, scrollTo);
+                }
+            }else {
+                var scrollTo = Math.abs(window.scrollY - pos) < 5 ? pos : (window.scrollY - 5);
+                if(scrollTo <= pos) {
+                    scrollTimer = window.clearInterval(scrollTimer);
+                }else {
+                    window.scroll(0, scrollTo);
+                }
+            }
+        }
         var gyScrollJS = {
             disableScroll: function() {
                 if (window.addEventListener) // older FF
@@ -35,6 +53,26 @@ define('gyScrollJS', [],
                 window.onwheel = null;
                 window.ontouchmove = null;
                 document.onkeydown = null;
+            },
+            scrollToPos: function(pos) {
+                if(scrollTimer) {
+                    scrollTimer = window.clearInterval(scrollTimer);
+                }
+                scrollTimer = setInterval(function() { scrollAnim(pos) }, 1);
+            },
+            scrollToNext: function() {
+                if(scrollTimer) {
+                    scrollTimer = window.clearInterval(scrollTimer);
+                }
+                var scrollToPos = window.scrollY + window.innerHeight;
+                scrollTimer = setInterval(function() { scrollAnim(scrollToPos) }, 1);
+            },
+            scrollToPre: function() {
+                if(scrollTimer) {
+                    scrollTimer = window.clearInterval(scrollTimer);
+                }
+                var scrollToPos = window.scrollY - window.innerHeight;
+                scrollTimer = setInterval(function() { scrollAnim(scrollToPos) }, 1);
             }
         }
         return gyScrollJS;

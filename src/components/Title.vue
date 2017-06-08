@@ -31,7 +31,7 @@ export default {
         }
     },
     mounted() {
-        this.scrollPos = this.$el.offsetTop + 210 - (window.innerHeight * 2);
+        this.scrollPos = this.$el.offsetTop + 210 - window.innerHeight;
         window.addEventListener('scroll', this.titleLineAnim);
     },
     destroyed () {
