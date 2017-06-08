@@ -2,17 +2,19 @@
     <div id="app" class="gy-app">
         <gy-nav></gy-nav>
         <router-view></router-view>
+        <gy-footer></gy-footer>
     </div>
 </template>
 
 <script>
 import gyNav from './components/Nav';
-
+import gyFooter from './components/Footer';
 
 export default {
     name: 'app',
     components: {
         gyNav,
+        gyFooter,
     },
 };
 </script>

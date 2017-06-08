@@ -22,7 +22,7 @@ export default {
     },
     data() {
         return {
-            wrapperHeight: window.innerHeight + 'px',
+            wrapperHeight: (window.innerHeight - 50) + 'px',
             workHeight: (window.innerHeight - 260) + 'px',
             mainTitle: 'M',
             scrollReveal: ScrollReveal(),
@@ -96,7 +96,6 @@ export default {
         display: inline-block;
         float: left;
         height: 100%;
-        background-color: #333;
     }
 }
 </style>
