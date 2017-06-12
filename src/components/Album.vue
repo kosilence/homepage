@@ -29,36 +29,36 @@ export default {
             scrollReveal: ScrollReveal(),
             cards: [
                 {
-                    name: 'Ace',
-                    url: 'http://ww1.sinaimg.cn/large/9eb6a82aly1fg0vou96hnj21ao0t646i.jpg',
+                    name: 'Temple of Marquis',
+                    url: 'http://ww2.sinaimg.cn/mw1024/9eb6a82agw1ezkgsckmkuj20zk0qogwd.jpg',
                 },
                 {
-                    name: 'Ace',
-                    url: 'http://ww1.sinaimg.cn/large/9eb6a82aly1fg0vou96hnj21ao0t646i.jpg',
+                    name: 'The North Taiping Bridge',
+                    url: 'http://ww1.sinaimg.cn/mw690/9eb6a82aly1fgiva75c2nj22io1w0u0z.jpg',
                 },
                 {
-                    name: 'Ace',
-                    url: 'http://ww1.sinaimg.cn/large/9eb6a82aly1fg0vou96hnj21ao0t646i.jpg',
+                    name: 'Hover My Love',
+                    url: 'http://ww1.sinaimg.cn/mw690/9eb6a82aly1fgiva2eg4aj20u00m9k1t.jpg',
                 },
                 {
-                    name: 'Ace',
-                    url: 'http://ww1.sinaimg.cn/large/9eb6a82aly1fg0vou96hnj21ao0t646i.jpg',
+                    name: 'Gulangyu Islet',
+                    url: 'http://ww2.sinaimg.cn/mw1024/9eb6a82agw1etxk0y6uyij20m80er0xe.jpg',
                 },
                 {
-                    name: 'Ace',
-                    url: 'http://ww1.sinaimg.cn/large/9eb6a82aly1fg0vou96hnj21ao0t646i.jpg',
+                    name: 'Crescent Spring',
+                    url: 'http://ww4.sinaimg.cn/mw1024/9eb6a82ajw1ewkyfpm1bzj20tt0kcgnd.jpg',
                 },
                 {
-                    name: 'Ace',
-                    url: 'http://ww1.sinaimg.cn/large/9eb6a82aly1fg0vou96hnj21ao0t646i.jpg',
+                    name: 'Qingyuan',
+                    url: 'http://ww2.sinaimg.cn/mw1024/9eb6a82agw1exxdvnikvnj21kw16on5r.jpg',
                 },
                 {
-                    name: 'Ace',
-                    url: 'http://ww1.sinaimg.cn/large/9eb6a82aly1fg0vou96hnj21ao0t646i.jpg',
+                    name: 'Yuanwanglou',
+                    url: 'http://ww1.sinaimg.cn/mw690/9eb6a82aly1fgiva27vc7j22io1w0b29.jpg',
                 },
                 {
-                    name: 'More...',
-                    url: 'http://ww1.sinaimg.cn/large/9eb6a82aly1fg0vou96hnj21ao0t646i.jpg',
+                    name: 'Quadcopter',
+                    url: 'http://ww1.sinaimg.cn/mw690/9eb6a82aly1fgiva3rbldj20m80go499.jpg',
                 }
             ],
         };
