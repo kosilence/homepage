@@ -15,7 +15,8 @@ RUN cp /etc/apk/repositories /etc/apk/repositories.bak && \
 # yarn
 #####################################
 RUN apk update && \
-    apk add yarn
+    npm install -g cnpm --registry=https://registry.npm.taobao.org && \
+    cnpm install --global yarn
 
 #####################################
 # Nginx Config
