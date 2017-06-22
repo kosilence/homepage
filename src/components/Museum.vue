@@ -12,7 +12,7 @@
 <script>
 import gyTitle from './Title';
 import gyWork from './Work';
-import ScrollReveal from 'ScrollReveal';
+import ScrollReveal from 'scrollreveal';
 
 export default {
     name: 'gy-museum',

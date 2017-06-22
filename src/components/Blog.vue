@@ -12,7 +12,7 @@
 <script>
 import gyTitle from './Title';
 import gyArticle from './Article';
-import ScrollReveal from 'ScrollReveal';
+import ScrollReveal from 'scrollreveal';
 
 export default {
     name: 'gy-blog',

@@ -12,7 +12,7 @@
 <script>
 import gyTitle from './Title';
 import gyCard from './Card';
-import ScrollReveal from 'ScrollReveal';
+import ScrollReveal from 'scrollreveal';
 
 export default {
     name: 'gy-album',
