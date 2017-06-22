@@ -22,14 +22,14 @@ define('gyScrollJS', [],
         }
         function scrollAnim(pos) {
             if(window.scrollY < pos) {
-                var scrollTo = Math.abs(window.scrollY - pos) < 5 ? pos : (window.scrollY + 5);
+                var scrollTo = Math.abs(window.scrollY - pos) < 8 ? pos : (window.scrollY + 8);
                 if(scrollTo >= pos) {
                     scrollTimer = window.clearInterval(scrollTimer);
                 }else {
                     window.scroll(0, scrollTo);
                 }
             }else {
-                var scrollTo = Math.abs(window.scrollY - pos) < 5 ? pos : (window.scrollY - 5);
+                var scrollTo = Math.abs(window.scrollY - pos) < 8 ? pos : (window.scrollY - 8);
                 if(scrollTo <= pos) {
                     scrollTimer = window.clearInterval(scrollTimer);
                 }else {
