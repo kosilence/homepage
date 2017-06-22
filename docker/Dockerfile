@@ -6,17 +6,9 @@ FROM smebberson/alpine-nginx-nodejs:4.4.0
 MAINTAINER Yi Gao <kosilence125@gmail.com>
 
 #####################################
-# Aliyun Mirrors
-#####################################
-RUN cp /etc/apk/repositories /etc/apk/repositories.bak && \
-    echo "http://mirrors.aliyun.com/alpine/v3.4/main/" > /etc/apk/repositories
-
-#####################################
 # yarn
 #####################################
-RUN apk update && \
-    npm install -g cnpm --registry=https://registry.npm.taobao.org && \
-    cnpm install --global yarn
+RUN npm install --global yarn
 
 #####################################
 # Nginx Config
