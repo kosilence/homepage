@@ -1,21 +1,51 @@
 # my-vue
 
-> A Vue.js project
+> A Vue.js project for my personal website.
 
-## Build Setup
+>To my online-site ->>>> [Cosin.tk | kosilence's homepage](http://www.cosin.tk)
 
-``` bash
-# install dependencies
-npm install
+### Web architecture
+Simply record my development and selection.
 
-# serve with hot reload at localhost:8080
-npm run dev
+##### Local dev environment | 本地开发环境
 
-# build for production with minification
-npm run build
+*Vue2.x + Webpack2.x*
+*Vue Components + vue-loader*
+*node-sass + autoprefixer*
 
-# build for production and view the bundle analyzer report
-npm run build --report
-```
+##### Production environment | 线上环境
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+*Alpine + Nginx + Nodejs small docker image*
+
+##### Continuous integration | 持续集成
+
+*Jenkins + Github*
+
+### Features
+What I'm going to do...
+
+**Backstage**
+
+* Provide api for site content, such as picture management function.
+
+**Homepage**
+
+* Mobile screen adaptation
+* Increase loading speed
+
+**Album**
+
+* Add more beautiful pics
+* Build a independent page
+* Lazy loading
+
+**Blog**
+
+* Bind to [blog.cosin.tk](blog.cosin.tk)'s articles
+
+**Museum**
+
+* Try to do something new & funny and achieve them
+* Build a independent page
+* Add some gif to introduce works
+
