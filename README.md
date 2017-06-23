@@ -5,23 +5,27 @@
 >To my online-site ->>>> [Cosin.tk | kosilence's homepage](http://www.cosin.tk)
 
 ### Web architecture
+
 Simply record my development and selection.
 
-##### Local dev environment | 本地开发环境
+#### Local dev environment | 本地开发环境
 
 *Vue2.x + Webpack2.x*
+
 *Vue Components + vue-loader*
+
 *node-sass + autoprefixer*
 
-##### Production environment | 线上环境
+#### Production environment | 线上环境
 
 *Alpine + Nginx + Nodejs small docker image*
 
-##### Continuous integration | 持续集成
+#### Continuous integration | 持续集成
 
 *Jenkins + Github*
 
 ### Features
+
 What I'm going to do...
 
 **Backstage**
