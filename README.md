@@ -4,6 +4,8 @@
 
 >To my online-site ->>>> [Cosin.tk | kosilence's homepage](http://www.cosin.tk)
 
+***
+
 ### Web architecture
 
 Simply record my development and selection.
@@ -23,6 +25,8 @@ Simply record my development and selection.
 #### Continuous integration | 持续集成
 
 *Jenkins + Github*
+
+***
 
 ### Features
 
