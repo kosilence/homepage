@@ -27,7 +27,7 @@ RUN yarn install && \
 
 RUN mkdir /var/www/cosin.tk && \
     mv /var/www/my-vue/dist /var/www/cosin.tk/dist && \
-    mv /var/www/my-vue/favicon.ico /var/www/cosin.tk/favicon.ico && \
+    mv /var/www/my-vue/favicon.ico /var/www/cosin.tk/dist/favicon.ico && \
     rm -rf /var/www/my-vue
 
 RUN chown -R nginx:www-data /var/www/cosin.tk
