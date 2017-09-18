@@ -2,8 +2,8 @@
     <div id="gyBanner" class="gy-banner" :class="{ 'animation--padding' : bannerAnimation }" :style="{ height: winHeight }">
         <div class="gy-banner__body">
             <div class="gy-banner__text">
-                <h1 class="gy-banner__title">I'm GaoYi.</h1>
-                <p class="gy-banner__content">The lonely journey called life.</p>
+                <h1 class="gy-banner__title">I'm Jiashuying.</h1>
+                <p class="gy-banner__content">我是一个中学教师.</p>
                 <a class="gy-banner__btn" @click="scrollToAlbum">Continue</a>
             </div>
         </div>

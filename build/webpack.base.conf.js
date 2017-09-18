@@ -9,7 +9,7 @@ function resolve(dir) {
 
 module.exports = {
     entry: {
-        app: './src/main.js'
+        app: './public/main.js'
     },
     output: {
         path: config.build.assetsRoot,
@@ -20,7 +20,7 @@ module.exports = {
         extensions: ['.js', '.vue', '.json'],
         alias: {
             'vue$': 'vue/dist/vue.esm.js',
-            '@': resolve('src')
+            '@': resolve('public')
         }
     },
     module: {
@@ -32,7 +32,7 @@ module.exports = {
         }, {
             test: /\.js$/,
             loader: 'babel-loader',
-            include: [resolve('src'), resolve('test')]
+            include: [resolve('public'), resolve('test')]
         }, {
             test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
             loader: 'url-loader',

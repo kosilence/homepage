@@ -36,10 +36,10 @@ module.exports = {
     db: 'mongodb://127.0.0.1/cosin',
     // Qiniu 云配置
     qn_config: {
-        accessKey: 'EN6grd3NZJrdCG2qaSCwP2vQrdzV-rxohl_WhlYz',
-        secretKey: 'ksIFyz5ezQsGiKhWdqTqIi8lJO3zZvETxhyV_dW6',
-        bucket: 'cosin',
-        origin: 'http://oqn3f8mal.bkt.clouddn.com',
+        accessKey: 'your accessKey',
+        secretKey: 'your secretKey',
+        bucket: 'your bucket name',
+        origin: 'your origin site',
         // 如果vps在国外，请使用 http://up.qiniug.com/ ，这是七牛的国际节点
         // 如果在国内，此项请留空
         uploadURL: '',
