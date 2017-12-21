@@ -1,22 +1,26 @@
 <template>
     <div id="gyTitle" class="gy-title">
         <div class="gy-title__line gy-title__line--top" :class="{ 'animation--top': lineAnimation }"></div>
-        <h2 class="gy-title__main">{{ mainTitle }}</h2>
         <div class="gy-title__line gy-title__line--bottom" :class="{ 'animation--bottom': lineAnimation }"></div>
+        <h2 class="gy-title__main" @click="openLinkPage">{{ firstWord }}<span class="gy-title__desc">{{ otherWords }}</span></h2>
     </div>
 </template>
 
 <script>
 export default {
     name: 'gy-title',
-    props: ['mainTitle'],
+    props: ['title', 'link'],
     data() {
         return {
             scrollPos: 0,
             lineAnimation: false,
+            firstWord: '',
+            otherWords: ''
         };
     },
     created() {
+        this.firstWord = this.title.slice(0, 1);
+        this.otherWords = this.title.slice(1);
     },
     methods: {
         titleLineAnim() {
@@ -28,6 +32,10 @@ export default {
             }else {
                 return;
             }
+        },
+        openLinkPage: function() {
+            let pageLink = this.link;
+            window.open(pageLink);
         }
     },
     mounted() {
@@ -66,10 +74,27 @@ export default {
         margin-right: 15px;
     }
     &__main {
-        width: 100%;
+        width: 200px;
         height: 80px;
+        margin: 0 auto;
         line-height: 80px;
+        font-size: 30px;
         font-weight: bold;
+        position: relative;
+        cursor: pointer;
+        transition: all .3s;
+        &:hover {
+            transform: scale(1.2, 1.2);
+        }
+    }
+    &__desc {
+        font-size: 12px;
+        height: 20px;
+        line-height: 20px;
+        position: absolute;
+        top: 50%;
+        margin-top: -6px;
+        margin-left: 2px;
     }
     .animation--top {
         animation: topTitleAnim 1.5s;

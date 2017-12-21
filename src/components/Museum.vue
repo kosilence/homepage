@@ -1,8 +1,8 @@
 <template>
     <div id="gyMuseum" class="gy-museum" :style="{ minHeight: wrapperHeight }">
-        <gy-title :mainTitle="mainTitle"></gy-title>
+        <gy-title :title="title" :link="link"></gy-title>
         <ul class="gy-museum__works" :style="{ height: workHeight }">
-            <li class="gy-museum__work" v-for="(work, workIndex) in works" :style="{ width: workWidth }">
+            <li class="gy-museum__work" v-for="(work, workIndex) in works" :key="'work-' + workIndex" :style="{ width: workWidth }">
                 <gy-work :work="work" :workIndex="workIndex"></gy-work>
             </li>
         </ul>
@@ -24,7 +24,8 @@ export default {
         return {
             wrapperHeight: (window.innerHeight - 50) + 'px',
             workHeight: (window.innerHeight - 260) + 'px',
-            mainTitle: 'M',
+            title: 'Museum',
+            link: '',
             scrollReveal: ScrollReveal(),
             workWidth: 0,
             works: [
@@ -62,7 +63,7 @@ export default {
                     time: '更多内容',
                     title: 'More...',
                     desc: 'To my blog...',
-                    url: 'http://blog.cosin.tk/',
+                    url: 'https://blog.cosin.tk/',
                 }
             ],
         };
@@ -88,12 +89,12 @@ export default {
     padding: 0;
     text-align: center;
     box-sizing: border-box;
+    box-shadow: 0 5px 20px #ddd inset;
     &__works {
         width: 100%;
         box-shadow: 0 -5px 20px #ddd;
     }
     &__work {
-        display: inline-block;
         float: left;
         height: 100%;
     }

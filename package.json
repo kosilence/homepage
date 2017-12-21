@@ -1,8 +1,8 @@
 {
-  "name": "my-vue",
+  "name": "homepage",
   "version": "1.0.0",
-  "description": "A Vue.js project",
-  "author": "gaoyi <125-gy@163.com>",
+  "description": "A homepage project with Vue.js",
+  "author": "gaoyi <kosilence125@gmail.com>",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",

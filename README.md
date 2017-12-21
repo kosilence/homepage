@@ -1,4 +1,4 @@
-# my-vue
+# Homepage
 
 > A Vue.js project for my personal website.
 
@@ -6,7 +6,7 @@
 
 ***
 
-### Web architecture
+## Web architecture
 
 Simply record my development and selection.
 
@@ -20,7 +20,7 @@ Simply record my development and selection.
 
 #### Production environment | 线上环境
 
-*Alpine + Nginx + Nodejs small docker image*
+*Alpine + Nginx + Nodejs docker image*
 
 #### Continuous integration | 持续集成
 
@@ -38,22 +38,22 @@ What I'm going to do...
 
 **Homepage**
 
-* Mobile screen adaptation
-* Increase loading speed
+* Mobile screen adaptation.
+* Increase loading speed.
 
 **Album**
 
-* Add more beautiful pics
-* Build a independent page
-* Lazy loading
+* Add more beautiful pics.
+* Build a independent page.
+* Lazy loading.
 
 **Blog**
 
-* Bind to [blog.cosin.tk](blog.cosin.tk)'s articles
+* Bind to [blog.cosin.tk](blog.cosin.tk)'s articles.
 
 **Museum**
 
-* Try to do something new & funny and achieve them
-* Build a independent page
-* Add some gif to introduce works
+* Try to do something new & funny and achieve them.
+* Build a independent page.
+* Add some gif to introduce works.
 

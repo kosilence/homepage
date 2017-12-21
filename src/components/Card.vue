@@ -1,7 +1,7 @@
 <template>
     <div class="gy-card">
         <div class="gy-card__image">
-            <img :src="card.url" :alt="card.name">
+            <img :src="card.url" :alt="card.name" :class="{ 'portrait': imagePortrait }" v-on:load="setImagePortrait">
         </div>
         <div class="gy-card__name">{{ card.name }}</div>
     </div>
@@ -10,7 +10,20 @@
 <script>
 export default {
     name: 'gy-card',
-    props: ['card']
+    props: ['card'],
+    data() {
+        return {
+            imagePortrait: false
+        }
+    },
+    methods: {
+        setImagePortrait: function(event) {
+            let imageScale = event.target.width / event.target.height;
+            if(imageScale < 1) {
+                this.imagePortrait = true;
+            }
+        }
+    }
 };
 </script>
 
@@ -31,9 +44,16 @@ export default {
         width: 100%;
         height: 230px;
         overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         img {
             width: auto;
             height: 100%;
+            &.portrait {
+                width: 100%;
+                height: auto;
+            }
         }
     }
     &__name {

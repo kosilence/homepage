@@ -1,8 +1,8 @@
 <template>
-    <div id="gyAlbum" class="gy-album" :style="{ minHeight: winHeight }">
-        <gy-title :mainTitle="mainTitle"></gy-title>
+    <div id="gyAlbum" class="gy-album">
+        <gy-title :title="title" :link="link"></gy-title>
         <ul id="albumCards" class="gy-album__cards">
-            <li v-for="card in cards" class="gy-album__card">
+            <li v-for="(card, cardIndex) in cards" :key="'card-' + cardIndex" class="gy-album__card">
                 <gy-card :card="card"></gy-card>
             </li>
         </ul>
@@ -24,8 +24,8 @@ export default {
     },
     data() {
         return {
-            winHeight: window.innerHeight + 'px',
-            mainTitle: 'A',
+            title: 'Album',
+            link: '',
             scrollReveal: ScrollReveal(),
             cards: [
                 {
@@ -80,7 +80,7 @@ export default {
     box-sizing: border-box;
     max-width: 1600px;
     margin: 0 auto;
-    padding: 0 30px 30px;
+    padding: 0 30px 60px;
     text-align: center;
     &__cards {
         width: 100%;

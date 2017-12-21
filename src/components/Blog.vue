@@ -1,8 +1,8 @@
 <template>
-    <div id="gyBlog" class="gy-blog" :style="{ minHeight: wrapperHeight }">
-        <gy-title :mainTitle="mainTitle"></gy-title>
+    <div id="gyBlog" class="gy-blog">
+        <gy-title :title="title" :link="link"></gy-title>
         <ul class="gy-blog__articles">
-            <li class="gy-blog__article" v-for="(article, articleIndex) in articles">
+            <li class="gy-blog__article" v-for="(article, articleIndex) in articles" :key="'article-' + articleIndex">
                 <gy-article :article="article" :articleIndex="articleIndex"></gy-article>
             </li>
         </ul>
@@ -23,7 +23,8 @@ export default {
     data() {
         return {
             wrapperHeight: window.innerHeight + 'px',
-            mainTitle: 'B',
+            title: 'Blog',
+            link: 'https://blog.cosin.tk/',
             scrollReveal: ScrollReveal(),
             articles: [
                 {
@@ -82,13 +83,11 @@ export default {
 .gy-blog {
     width: 100%;
     margin: 0 auto;
-    padding: 0 30px;
+    padding: 0 30px 60px;
     text-align: center;
     background-color: #f5f5f5;
     box-sizing: border-box;
-    &__articles {
-
-    }
+    box-shadow: 0 -5px 20px #ddd;
     &__article {
         width: 100%;
     }

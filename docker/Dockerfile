@@ -3,7 +3,7 @@
 #####################################
 FROM smebberson/alpine-nginx-nodejs:4.4.0
 
-MAINTAINER Yi Gao <kosilence125@gmail.com>
+LABEL maintainer="Yi Gao <kosilence125@gmail.com>"
 
 #####################################
 # yarn
