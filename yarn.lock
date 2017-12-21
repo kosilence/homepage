@@ -4081,6 +4081,10 @@ verror@1.3.6:
   dependencies:
     extsprintf "1.0.2"
 
+viewerjs@^1.0.0-beta:
+  version "1.0.0-beta"
+  resolved "https://registry.yarnpkg.com/viewerjs/-/viewerjs-1.0.0-beta.tgz#e8965289f2ef0f77fb4a80d8ffc24e60cb7e01a4"
+
 vm-browserify@0.0.4:
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-0.0.4.tgz#5d7ea45bbef9e4a6ff65f95438e0a87c357d5a73"

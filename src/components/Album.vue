@@ -3,7 +3,7 @@
         <gy-title :title="title" :link="link"></gy-title>
         <ul id="albumCards" class="gy-album__cards">
             <li v-for="(card, cardIndex) in cards" :key="'card-' + cardIndex" class="gy-album__card">
-                <gy-card :card="card"></gy-card>
+                <gy-card :card="card" @click.native="showImageViewer(cardIndex)"></gy-card>
             </li>
         </ul>
     </div>
@@ -13,6 +13,7 @@
 import gyTitle from './Title';
 import gyCard from './Card';
 import ScrollReveal from 'scrollreveal';
+import Viewer from 'viewerjs'
 
 export default {
     name: 'gy-album',
@@ -27,6 +28,7 @@ export default {
             title: 'Album',
             link: '',
             scrollReveal: ScrollReveal(),
+            viewer: null,
             cards: [
                 {
                     name: 'Temple of Marquis',
@@ -66,10 +68,14 @@ export default {
     methods: {
         setAlbumScrollReveal: function() {
             this.scrollReveal.reveal('.gy-album__card', { duration: 2000 }, 50);
+        },
+        showImageViewer: function(index) {
+            this.viewer.show();
         }
     },
     mounted() {
         this.setAlbumScrollReveal();
+        this.viewer = new Viewer(document.getElementById('albumCards'));
     }
 };
 </script>

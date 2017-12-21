@@ -21,6 +21,7 @@ export default {
 
 <style lang="scss">
 @import url('./scss/init.scss');
+@import url('../node_modules/viewerjs/dist/viewer.min.css');
 
 body {
     position: relative;

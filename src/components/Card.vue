@@ -1,7 +1,7 @@
 <template>
     <div class="gy-card">
         <div class="gy-card__image">
-            <img :src="card.url" :alt="card.name" :class="{ 'portrait': imagePortrait }" v-on:load="setImagePortrait">
+            <img :src="card.url" :alt="card.name" :class="{ 'portrait': imagePortrait }" @load="setImagePortrait">
         </div>
         <div class="gy-card__name">{{ card.name }}</div>
     </div>
@@ -22,6 +22,9 @@ export default {
             if(imageScale < 1) {
                 this.imagePortrait = true;
             }
+        },
+        showImageViewer: function() {
+            this.$emit('showImageViewer', this.card.url);
         }
     }
 };
