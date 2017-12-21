@@ -28,6 +28,16 @@ export default {
             scrollReveal: ScrollReveal(),
             articles: [
                 {
+                    time: 'Jun 26, 2017',
+                    title: '读书笔记: JavaScript 语言精粹',
+                    desc: '《JavaScript: The Good Parts》 | JavaScript 曾是“世界上最被误解的语言”，因为它担负太多的特性，包括糟糕的交互和失败的设计。 | 本书拨开了 JavaScript 沾污的外衣，抽离出一个具有更好可靠性、可读性和可维护性的 JavaScript 子集，让你看到一门优雅的、轻量级的和非常富有表现力的语言。',
+                    url: 'https://blog.cosin.tk/2017/06/26/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-JavaScript%E8%AF%AD%E8%A8%80%E7%B2%BE%E7%B2%B9/',
+                },{
+                    time: 'Jun 23, 2017',
+                    title: '记录个人主页的上线过程',
+                    desc: '忽略 Github pages，这也许是我的第一个 Personal page | 前端使用 Vue-cli2.x webpack2.x 搭架子，上线了 Linode 的服务器，代码托管在 Github，本地运行容器化的 Jenkins 持续集成 | 下一步，创建后台资源管理系统，省去频繁替换主页展示内容的代码工作量，继续完善主页的内容以及添加各个二级页面，加油！',
+                    url: 'https://blog.cosin.tk/2017/06/23/%E8%AE%B0%E5%BD%95%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%E7%9A%84%E4%B8%8A%E7%BA%BF%E8%BF%87%E7%A8%8B/',
+                },{
                     time: 'May 23, 2017',
                     title: '快速搭建一个可离线下载的私有云',
                     desc: '搭建这个云的主要目的是可以方便地离线下载到VPS上 | No 百度云 && No LowSpeed && No LookAfter | 然而低配版的VPS存储空间太有限了，20G总硬盘，去除系统空间和一些必要的软件，大概只余下8G左右了 | 资源文件只能随用随删了',

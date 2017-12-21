@@ -1,6 +1,6 @@
 <template>
     <div id="gyFooter" class="gy-footer">
-        <p class="gy-footer__body">&copy; Copyright 2017 @<a href="https://github.com/kosilence" target="_blank">GaoYi</a>&nbsp; No Rights Reserved</p>
+        <p class="gy-footer__body">&copy; Copyright 2017 @<a href="https://github.com/kosilence" target="_blank">kosilence</a>&nbsp; No Rights Reserved</p>
     </div>
 </template>
 
@@ -21,6 +21,7 @@ export default {
     background-color: #111;
     text-align: center;
     box-sizing: border-box;
+    font-family: 'serif';
     &__body {
         line-height: 50px;
         color: #eee;
